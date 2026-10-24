@@ -109,7 +109,39 @@ p { margin: 0; }
   color: inherit;
 }
 
-.rings { width: 62px; height: auto; flex: 0 0 auto; }
+/* ---- Brand logo (logo.png) ---- */
+.brand-logo-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 10px 30px -12px rgba(232, 185, 59, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.brand:hover .brand-logo-wrap {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow:
+    0 14px 38px -12px rgba(232, 185, 59, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 0 10px rgba(232, 185, 59, 0.35));
+}
 
 .brand-title {
   display: block;
@@ -656,7 +688,7 @@ p { margin: 0; }
   .header-inner { height: 68px; }
   .brand-title { font-size: 0.9rem; white-space: normal; }
   .brand-sub { font-size: 0.58rem; letter-spacing: 0.18em; }
-  .rings { width: 48px; }
+  .brand-logo-wrap { width: 48px; height: 48px; border-radius: 12px; }
   .nav { display: none; }
 
   .hero { padding: 68px 0 52px; }
